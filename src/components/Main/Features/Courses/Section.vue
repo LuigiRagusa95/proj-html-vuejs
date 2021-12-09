@@ -3,6 +3,13 @@
 		<div>
 			<CourseCard v-for="(data, index) in datas" :key="`featured-card-${index}`" :title="data.title" :cover="data.cover" :price="data.price" :image="data.image" :name="data.author" :lessons="data.lessons" :students="data.students" />
 		</div>
+		<div>
+			<div class="button">
+				<a href="#">
+					<span>View all courses</span><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+				</a>
+			</div>
+		</div>
 	</section>
 </template>
 
@@ -86,6 +93,33 @@ section {
 		padding: 2rem;
 		flex-wrap: wrap;
 		justify-content: center;
+	}
+
+	> div:last-of-type {
+		display: flex;
+		padding: 1rem;
+		justify-content: center;
+	}
+
+	.button {
+		display: flex;
+		color: $white;
+		font-size: 1rem;
+		font-weight: 600;
+		width: fit-content;
+		align-items: center;
+		line-height: 1.5rem;
+		border-radius: 0.5rem;
+		justify-content: center;
+		background-color: $jungle-green;
+
+		> a {
+			padding: 0.875rem 2rem;
+			> span:last-of-type {
+				margin-left: 1rem;
+				font-size: 1.5rem;
+			}
+		}
 	}
 }
 </style>
