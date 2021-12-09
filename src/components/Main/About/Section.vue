@@ -12,11 +12,13 @@
 		</ul>
 		<div class="about-info">
 			<figure>
-				<img src="../../../assets/images/about-us-03-image-01.png" alt="about image" />
+				<div>
+					<img src="../../../assets/images/about-us-03-image-01.png" alt="about image" />
+				</div>
 			</figure>
 			<article>
 				<h3>Dream with <strong>MAXCOACH</strong></h3>
-				<h1>Construct a <span>Stunning</span> Career Perspective</h1>
+				<h1>Construct A <strong>Stunning</strong> Career Perspective</h1>
 				<Accordion />
 			</article>
 		</div>
@@ -114,15 +116,53 @@ section {
 		display: flex;
 		padding: 1rem;
 		margin-top: 2rem;
-		align-items: center;
+		// align-items: center;
 		justify-content: center;
 
 		> figure {
 			width: 100%;
+			display: flex;
+			padding: 2rem;
+			align-items: center;
+			justify-content: center;
+
+			> div:first-child {
+				max-width: 420px;
+
+				> img {
+					max-width: 100%;
+					object-fit: cover;
+				}
+			}
 		}
 
 		> article {
 			width: 100%;
+			padding: 2rem;
+
+			> h3 {
+				font-weight: 400;
+				color: $oslo-gray;
+				font-size: 0.875rem;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+
+				> strong {
+					color: $pewter;
+				}
+			}
+
+			> h1 {
+				width: 100%;
+				line-height: 3rem;
+				font-size: 2.5rem;
+				margin-bottom: 2rem;
+
+				> strong {
+					font-weight: 400;
+					color: $jungle-green;
+				}
+			}
 		}
 	}
 }
