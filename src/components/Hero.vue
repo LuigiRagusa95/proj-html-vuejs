@@ -29,9 +29,9 @@ export default {
 @import "../styles/index.scss";
 
 section {
-	@extend .flex-section;
+	padding: 2rem 0;
 	margin-top: 2rem;
-	padding-bottom: 1rem;
+	@extend .flex-section;
 
 	> article {
 		width: 100%;

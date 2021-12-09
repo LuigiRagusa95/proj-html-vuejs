@@ -1,22 +1,33 @@
 <template>
 	<section>
-		<div class="title">
+		<div class="about-title">
 			<h3>start learning coding languages</h3>
 			<h1>
 				<span>Build Your Dream </span>
 				<span class="title-keyword">TODAY</span>
 			</h1>
 		</div>
-		<ul class="card-list">
+		<ul class="about-list">
 			<Card v-for="(card, index) in cards" :key="`card-n-${index}`" :title="card.title" :text="card.text" :label="card.label" :image="card.image" />
 		</ul>
+		<div class="about-info">
+			<figure>
+				<img src="../../../assets/images/about-us-03-image-01.png" alt="about image" />
+			</figure>
+			<article>
+				<h3>Dream with <strong>MAXCOACH</strong></h3>
+				<h1>Construct a <span>Stunning</span> Career Perspective</h1>
+				<Accordion />
+			</article>
+		</div>
 	</section>
 </template>
 
 <script>
 import Card from "./Card.vue";
+import Accordion from "./Accordion.vue";
 export default {
-	components: { Card },
+	components: { Card, Accordion },
 	name: "Section",
 	data() {
 		return {
@@ -56,10 +67,11 @@ export default {
 @import "@/styles/index.scss";
 section {
 	margin: 0 auto;
+	padding: 2rem 0;
 	max-width: 1400px;
 	min-height: 100vh;
 
-	> .title {
+	> .about-title {
 		display: flex;
 		padding: 1rem;
 		flex-flow: column;
@@ -90,12 +102,28 @@ section {
 		}
 	}
 
-	> .card-list {
+	> .about-list {
 		display: flex;
 		padding: 1rem;
 		margin-top: 2rem;
 		align-items: center;
 		justify-content: center;
+	}
+
+	> .about-info {
+		display: flex;
+		padding: 1rem;
+		margin-top: 2rem;
+		align-items: center;
+		justify-content: center;
+
+		> figure {
+			width: 100%;
+		}
+
+		> article {
+			width: 100%;
+		}
 	}
 }
 </style>
