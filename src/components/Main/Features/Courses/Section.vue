@@ -1,14 +1,19 @@
 <template>
 	<section>
-		<div>
-			<CourseCard v-for="(data, index) in datas" :key="`featured-card-${index}`" :title="data.title" :cover="data.cover" :price="data.price" :image="data.image" :name="data.author" :lessons="data.lessons" :students="data.students" />
-		</div>
-		<div>
-			<div class="button">
-				<a href="#">
-					<span>View all courses</span><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
-				</a>
+		<article>
+			<div>
+				<CourseCard v-for="(data, index) in datas" :key="`featured-card-${index}`" :title="data.title" :cover="data.cover" :price="data.price" :image="data.image" :name="data.author" :lessons="data.lessons" :students="data.students" />
 			</div>
+			<div>
+				<div class="button">
+					<a href="#">
+						<span>View all courses</span><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+					</a>
+				</div>
+			</div>
+		</article>
+		<div class="wave">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="currentColor" fill-opacity="1" d="M0,256L120,218.7C240,181,480,107,720,106.7C960,107,1200,181,1320,218.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
 		</div>
 	</section>
 </template>
@@ -85,41 +90,53 @@ export default {
 <style lang="scss" scoped>
 @import "../../../../styles/index.scss";
 section {
-	margin: 0 auto;
-	max-width: 1400px;
+	position: relative;
+	background: linear-gradient(#ffffff, $gallery);
 
-	> div:first-of-type {
-		display: flex;
-		padding: 2rem;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+	article {
+		margin: 0 auto;
+		max-width: 1400px;
 
-	> div:last-of-type {
-		display: flex;
-		padding: 1rem;
-		justify-content: center;
-	}
+		> div:first-of-type {
+			display: flex;
+			padding: 2rem;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 
-	.button {
-		display: flex;
-		color: $white;
-		font-size: 1rem;
-		font-weight: 600;
-		width: fit-content;
-		align-items: center;
-		line-height: 1.5rem;
-		border-radius: 0.5rem;
-		justify-content: center;
-		background-color: $jungle-green;
+		> div:last-of-type {
+			display: flex;
+			padding: 1rem;
+			justify-content: center;
+		}
 
-		> a {
-			padding: 0.875rem 2rem;
-			> span:last-of-type {
-				margin-left: 1rem;
-				font-size: 1.5rem;
+		.button {
+			display: flex;
+			color: $white;
+			font-size: 1rem;
+			font-weight: 600;
+			width: fit-content;
+			align-items: center;
+			line-height: 1.5rem;
+			border-radius: 0.5rem;
+			justify-content: center;
+			background-color: $jungle-green;
+
+			> a {
+				padding: 0.875rem 2rem;
+				> span:last-of-type {
+					margin-left: 1rem;
+					font-size: 1.5rem;
+				}
 			}
 		}
+	}
+
+	.wave {
+		color: $gallery;
+		position: absolute;
+		top: calc(100% - 1rem);
+		transform: rotate(180deg);
 	}
 }
 </style>

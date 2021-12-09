@@ -63,6 +63,7 @@ export default {
 	max-width: 320px;
 	position: relative;
 	border-radius: 0.5rem;
+	// background-color: $white;
 
 	a {
 		display: flex;

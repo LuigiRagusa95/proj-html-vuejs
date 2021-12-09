@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="features">
 		<h3>Choose where you'd like to begin</h3>
 		<h1>Latest Featured <strong>Courses</strong></h1>
 		<Section />
@@ -23,9 +23,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../../styles/index.scss";
-section {
+.features {
+	width: 100%;
 	padding: 2rem 0;
 	min-height: 100vh;
+	position: relative;
 
 	> h3 {
 		margin: 1rem;
