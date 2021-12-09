@@ -60,7 +60,10 @@
 					</a>
 				</div>
 				<!-- // section search -->
-				<div></div>
+				<div class="search">
+					<input type="text" name="input-field" id="input-field" placeholder="Search..." />
+					<span><ion-icon name="search-outline"></ion-icon></span>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -78,10 +81,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/index.scss";
-a,
-span {
-	display: flex;
-}
 
 .navigation {
 	display: flex;
@@ -155,6 +154,28 @@ span {
 						content: attr(data-quantity);
 						background-color: $jungle-green;
 					}
+				}
+			}
+
+			> .search {
+				padding: 0.25rem;
+				margin-left: 1rem;
+				@extend .flex-section;
+				border-radius: 0.25rem;
+				background-color: $white;
+
+				> input {
+					max-width: 168px;
+					padding: 0.25rem;
+					&::placeholder {
+						color: $oslo-gray;
+					}
+				}
+
+				> span:last-of-type {
+					font-size: 1.125rem;
+					color: $jungle-green;
+					margin-right: 0.25rem;
 				}
 			}
 		}
