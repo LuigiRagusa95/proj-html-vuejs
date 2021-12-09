@@ -51,7 +51,14 @@
 					</ul>
 				</nav>
 				<!-- // section actions -->
-				<div></div>
+				<div class="actions">
+					<a href="#" class="badged" data-quantity="0">
+						<span><ion-icon name="cart-outline"></ion-icon></span>
+					</a>
+					<a href="#">
+						<span><ion-icon name="person-circle-outline"></ion-icon></span>
+					</a>
+				</div>
 				<!-- // section search -->
 				<div></div>
 			</div>
@@ -118,6 +125,35 @@ span {
 								margin-left: 0.25rem;
 							}
 						}
+					}
+				}
+			}
+
+			> .actions {
+				@extend .flex-section;
+				> a {
+					display: flex;
+					padding: 0.5rem;
+					font-size: 1.5em;
+					position: relative;
+					color: $mulled-wine;
+					align-items: center;
+					justify-content: center;
+
+					&.badged::before {
+						display: flex;
+						width: 1rem;
+						height: 1rem;
+						color: $gallery;
+						position: absolute;
+						font-size: 0.65rem;
+						align-items: center;
+						left: calc(100% - 1rem);
+						border-radius: 999999px;
+						justify-content: center;
+						bottom: calc(100% - 1rem);
+						content: attr(data-quantity);
+						background-color: $jungle-green;
 					}
 				}
 			}
