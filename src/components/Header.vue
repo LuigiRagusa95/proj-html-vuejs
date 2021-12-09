@@ -3,6 +3,7 @@
 		<section>
 			<NavBar />
 			<Hero />
+			<NavFix />
 		</section>
 		<div class="wave">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="rgba(51,51,51,.06)" version="1.1" preserveAspectRatio="none" width="100%" height="300px">
@@ -19,9 +20,10 @@
 <script>
 import Hero from "./Hero.vue";
 import NavBar from "./NavBar.vue";
+import NavFix from "./NavFix.vue";
 export default {
 	name: "Header",
-	components: { NavBar, Hero },
+	components: { NavBar, Hero, NavFix },
 	data() {
 		return {};
 	},

@@ -3,6 +3,12 @@ span {
 	display: flex;
 }
 
+ul,
+li,
+ol {
+	list-style: none;
+}
+
 input {
 	border: none;
 	outline: none;

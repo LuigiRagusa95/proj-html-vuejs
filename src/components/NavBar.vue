@@ -141,6 +141,7 @@ export default {
 
 					&.badged::before {
 						display: flex;
+						z-index: 2;
 						width: 1rem;
 						height: 1rem;
 						color: $gallery;
