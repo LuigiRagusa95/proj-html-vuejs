@@ -10,7 +10,7 @@
 			</div>
 		</article>
 		<figure>
-			<img src="../assets/images/home-5-hero-image.png" alt="" />
+			<img src="../../assets/images/home-5-hero-image.png" alt="" />
 		</figure>
 	</section>
 </template>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/index.scss";
+@import "../../styles/index.scss";
 
 section {
 	padding: 2rem 0;

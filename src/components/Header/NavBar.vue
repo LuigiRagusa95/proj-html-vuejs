@@ -3,7 +3,7 @@
 		<div class="left-navigation">
 			<a href="#">
 				<div class="image-navigation">
-					<img src="../assets/images/dark-logo.png" alt="max coach image" />
+					<img src="../../assets/images/dark-logo.png" alt="max coach image" />
 				</div>
 			</a>
 		</div>
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/index.scss";
+@import "../../styles/index.scss";
 
 .navigation {
 	display: flex;

@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import Hero from "./Hero.vue";
-import NavBar from "./NavBar.vue";
-import NavFix from "./NavFix.vue";
+import Hero from "../Header/Hero.vue";
+import NavBar from "../Header/NavBar.vue";
+import NavFix from "../Header/NavFix.vue";
 export default {
 	name: "Header",
 	components: { NavBar, Hero, NavFix },
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/index.scss";
+@import "../../styles/index.scss";
 
 header {
 	position: relative;

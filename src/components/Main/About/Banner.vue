@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/index.scss";
+@import "../../../styles/index.scss";
 
 section {
 	display: flex;
@@ -47,6 +47,7 @@ section {
 
 		> p {
 			margin: 0.5rem 0;
+			font-weight: 500;
 			color: $mulled-wine;
 			font-size: 0.875rem;
 			letter-spacing: 0.02rem;
