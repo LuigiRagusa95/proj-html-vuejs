@@ -38,6 +38,7 @@ nav {
 
 		> li {
 			cursor: pointer;
+			color: $cod-gray;
 			padding: 0.25rem;
 
 			&:not(li:last-child) {
