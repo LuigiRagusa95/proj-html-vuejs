@@ -1,7 +1,9 @@
 <template>
 	<header>
-		<NavBar />
-		<Hero />
+		<section>
+			<NavBar />
+			<Hero />
+		</section>
 	</header>
 </template>
 
@@ -18,4 +20,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "../styles/index.scss";
+
+header {
+	background-color: $gallery;
+
+	> section:first-of-type {
+		margin: 0 auto;
+		max-width: 1400px;
+	}
+}
+</style>

@@ -25,6 +25,15 @@ html,
 body {
 	width: 100%;
 	height: 100%;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	font-family: "Poppins", sans-serif;
+}
+
+a {
+	font-size: 1rem;
+	color: currentColor;
+	line-height: 1.5rem;
+	text-decoration: none;
 }
 </style>
