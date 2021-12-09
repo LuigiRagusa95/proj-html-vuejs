@@ -38,4 +38,10 @@ a {
 	line-height: 1.5rem;
 	text-decoration: none;
 }
+
+#app {
+	display: flex;
+	min-width: 100vh;
+	flex-direction: column;
+}
 </style>

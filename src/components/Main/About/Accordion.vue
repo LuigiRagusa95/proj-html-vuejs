@@ -66,8 +66,10 @@ export default {
 			color: $cod-gray;
 			line-height: 2rem;
 			align-items: center;
+			font-size: 0.9375rem;
 			padding: 0.5rem 1rem;
 			border-radius: 0.25rem;
+			letter-spacing: 0.02rem;
 			background-color: $white;
 			justify-content: space-between;
 

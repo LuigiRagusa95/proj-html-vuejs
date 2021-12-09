@@ -71,9 +71,11 @@ section {
 	}
 
 	> figure {
+		z-index: 10;
 		width: 100%;
 		display: flex;
 		padding: 1rem;
+		position: relative;
 		align-items: center;
 		justify-content: center;
 
