@@ -16,6 +16,7 @@
 					<div>
 						<img src="../../../assets/images/about-us-03-image-01.png" alt="about image" />
 					</div>
+					<img class="image-overlay" src="@/assets/images/underlay-shape-lilla.svg" alt="underlay image" />
 				</figure>
 				<article>
 					<h3>Dream with <strong>MAXCOACH</strong></h3>
@@ -130,6 +131,7 @@ section {
 				width: 100%;
 				display: flex;
 				padding: 2rem;
+				position: relative;
 				align-items: center;
 				justify-content: center;
 
@@ -137,9 +139,18 @@ section {
 					max-width: 420px;
 
 					> img {
+						z-index: 10;
 						max-width: 100%;
 						object-fit: cover;
 					}
+				}
+
+				> .image-overlay {
+					top: 20%;
+					left: 0;
+					width: 50%;
+					z-index: -1;
+					position: absolute;
 				}
 			}
 
