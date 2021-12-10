@@ -80,17 +80,24 @@ export default {
 
 	&-button {
 		margin-top: 1rem;
+		border-radius: 0.25rem;
+
 		> a {
 			display: flex;
 			padding: 0.5rem;
 			font-weight: 600;
-			align-items: center;
 			color: $mulled-wine;
+			align-items: center;
+			transition: 0.2s ease;
 			justify-content: center;
 
 			> span:last-of-type {
 				margin-left: 0.5rem;
 			}
+		}
+
+		&:hover {
+			background-color: $gallery;
 		}
 	}
 }

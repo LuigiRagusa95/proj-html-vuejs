@@ -62,8 +62,8 @@ export default {
 	overflow: hidden;
 	max-width: 320px;
 	position: relative;
+	transition: 0.2s ease;
 	border-radius: 0.5rem;
-	// background-color: $white;
 
 	a {
 		display: flex;
@@ -155,6 +155,11 @@ export default {
 				}
 			}
 		}
+	}
+
+	&:hover {
+		background-color: $white;
+		box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.2);
 	}
 }
 </style>

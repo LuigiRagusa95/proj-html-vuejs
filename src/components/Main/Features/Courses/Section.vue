@@ -118,6 +118,7 @@ section {
 			width: fit-content;
 			align-items: center;
 			line-height: 1.5rem;
+			transition: 0.2s ease;
 			border-radius: 0.5rem;
 			justify-content: center;
 			background-color: $jungle-green;
