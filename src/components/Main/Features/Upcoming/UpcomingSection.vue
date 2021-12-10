@@ -6,7 +6,7 @@
 				<h1>Upcoming <strong>Events</strong></h1>
 			</div>
 			<div class="card-list">
-				<UpcomingCard />
+				<UpcomingCard v-for="(data, index) in upcomingCards" :key="`upcoming-card-${index}`" :name="data.name" :place="data.place" :day="data.day" :month="data.month" />
 			</div>
 			<div class="link">
 				<a>
