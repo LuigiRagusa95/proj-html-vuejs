@@ -34,7 +34,26 @@
 					<img class="imgage-overlay" src="../../../../assets/images/maxcoach-shape-05-100x100.png" alt="image description" />
 				</figure>
 			</div>
-			<div>first 2</div>
+			<div>
+				<figure>
+					<div class="image">
+						<img src="../../../../assets/images/home-5-image-02.png" alt="image description" />
+						<img class="imgage-underlay mod" src="../../../../assets/images/underlay-shape-grey.svg" alt="image description" />
+					</div>
+					<img class="imgage-overlay" src="../../../../assets/images/maxcoach-shape-07-100x100.png" alt="image description" />
+					<img class="imgage-overlay" src="../../../../assets/images/maxcoach-shape-01.png" alt="image description" />
+				</figure>
+				<article>
+					<h3>What are you looking for?</h3>
+					<h1 class="mod">Learn on your <strong>mobile</strong> anytime!</h1>
+					<p>Save lessons for later and revise or write notes at any time and on multiple devices on your way. Never interfere with activities of enjoyment or other precious moments.</p>
+					<div class="button">
+						<a href="#">
+							<span>Download Our App</span>
+						</a>
+					</div>
+				</article>
+			</div>
 		</div>
 	</section>
 </template>
@@ -63,13 +82,15 @@ section {
 		> div:first-child,
 		> div:last-child {
 			display: flex;
+			padding: 2rem;
 			align-items: center;
 			justify-content: center;
 
 			> article {
 				display: flex;
 				padding: 2rem;
-				margin-right: 2rem;
+				margin: 0 2rem;
+				max-width: 560px;
 				flex-direction: column;
 
 				> h3 {
@@ -86,11 +107,15 @@ section {
 					line-height: 3rem;
 					font-size: 2.5rem;
 					color: $mulled-wine;
+					margin-bottom: 1rem;
 					letter-spacing: 0.02rem;
 
 					strong {
 						font-weight: 400;
 						color: $jungle-green;
+					}
+					&.mod {
+						max-width: none;
 					}
 				}
 
@@ -112,6 +137,11 @@ section {
 							color: $oslo-gray;
 						}
 					}
+				}
+
+				p {
+					color: $oslo-gray;
+					margin-bottom: 1.5rem;
 				}
 
 				.button {
@@ -148,14 +178,31 @@ section {
 						z-index: -1;
 						max-width: 360px;
 						position: absolute;
+						&.mod {
+							bottom: -5%;
+							left: -20%;
+						}
 					}
 				}
 
 				.imgage-overlay {
-					top: 50%;
-					right: 0;
-					width: 120px;
+					z-index: -1;
 					position: absolute;
+
+					&:nth-child(2) {
+						top: 50%;
+						right: 0;
+						width: 120px;
+					}
+
+					&:nth-child(3) {
+						top: 50%;
+						left: -25%;
+						z-index: -1;
+						width: 120px;
+						position: absolute;
+						transform: translateY(-50%);
+					}
 				}
 			}
 		}
