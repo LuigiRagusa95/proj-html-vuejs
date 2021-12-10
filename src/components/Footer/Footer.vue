@@ -34,8 +34,13 @@
 					</ul>
 				</div>
 			</div>
-			<div class="bottom">
+			<div class="credits">
 				<span>2020 Maxcoach. All rights Reserved</span>
+				<div class="button" @click.prevent="goToTop">
+					<a href="#"
+						><span><ion-icon name="arrow-up"></ion-icon></span
+					></a>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -46,6 +51,11 @@ export default {
 	name: "Footer",
 	data() {
 		return {};
+	},
+	methods: {
+		goToTop() {
+			window.scrollTo(0, 0);
+		},
 	},
 };
 </script>
@@ -104,12 +114,32 @@ footer {
 			}
 		}
 
-		> .bottom {
+		> .credits {
 			display: flex;
 			padding: 1rem;
 			color: $oslo-gray;
+			align-items: center;
 			font-size: 0.875rem;
 			justify-content: center;
+
+			> .button {
+				right: 1rem;
+				color: $white;
+				font-size: 2rem;
+				position: absolute;
+
+				border-radius: 999999px;
+
+				background-color: $jungle-green;
+
+				> a {
+					width: 3rem;
+					height: 3rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
 		}
 	}
 }

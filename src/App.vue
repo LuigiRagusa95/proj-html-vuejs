@@ -31,6 +31,7 @@ body {
 	height: 100%;
 	font-size: 1rem;
 	line-height: 1.5rem;
+	scroll-behavior: smooth;
 	font-family: "Poppins", sans-serif;
 }
 
