@@ -4,18 +4,21 @@
 		<h1>Latest Featured <strong>Courses</strong></h1>
 		<Section />
 		<LearningSection />
+		<UpcomingSection />
 	</section>
 </template>
 
 <script>
 import Section from "../Features/Courses/Section.vue";
 import LearningSection from "../Features/Info/LearningSection.vue";
+import UpcomingSection from "./Upcoming/UpcomingSection.vue";
 
 export default {
 	name: "Features",
 	components: {
 		Section,
 		LearningSection,
+		UpcomingSection,
 	},
 	data() {
 		return {};
