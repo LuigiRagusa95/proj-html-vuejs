@@ -12,6 +12,8 @@
 				<div class="button">
 					<a href="#">Get started now</a>
 				</div>
+				<div class="image-overlay"><img src="@/assets/images/maxcoach-shape-01.png" alt="image overlay" /></div>
+				<div class="image-overlay"><img src="@/assets/images/maxcoach-shape-02.png" alt="image overlay" /></div>
 			</div>
 		</div>
 	</section>
@@ -39,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/index.scss";
+@import "@/styles/index.scss";
 section {
 	padding: 2rem 0;
 	background-color: $gallery;
@@ -51,7 +53,9 @@ section {
 		> .title {
 			width: 100%;
 			display: flex;
+			position: relative;
 			align-items: center;
+			padding-bottom: 4rem;
 			flex-direction: column;
 			justify-content: center;
 
@@ -101,6 +105,7 @@ section {
 					margin-bottom: 1rem;
 					letter-spacing: 0.02rem;
 				}
+
 				> .button {
 					display: flex;
 					color: $white;
@@ -119,6 +124,16 @@ section {
 
 					&:hover {
 						background-color: $mulled-wine;
+					}
+				}
+
+				> .image-overlay {
+					top: 25%;
+					left: 10%;
+					position: absolute;
+
+					&:last-child {
+						left: 80%;
 					}
 				}
 			}
