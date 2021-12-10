@@ -96,7 +96,8 @@ export default {
 	.image-navigation {
 		width: 144px;
 		height: 32px;
-		@extend .flex-section;
+		display: flex;
+		align-items: center;
 
 		> img {
 			width: 100%;
@@ -106,19 +107,22 @@ export default {
 
 	.right-navigation {
 		> div:first-of-type {
-			@extend .flex-section;
+			display: flex;
+			align-items: center;
 
 			> nav {
 				display: flex;
 				> ul {
 					list-style: none;
-					@extend .flex-section;
+					display: flex;
+					align-items: center;
 
 					> li {
 						padding: 0.5rem 0.75rem;
 						> a {
 							color: $mulled-wine;
-							@extend .flex-section;
+							display: flex;
+							align-items: center;
 
 							> span:last-of-type {
 								margin-left: 0.25rem;
@@ -129,7 +133,8 @@ export default {
 			}
 
 			> .actions {
-				@extend .flex-section;
+				display: flex;
+				align-items: center;
 				> a {
 					display: flex;
 					padding: 0.5rem;
@@ -161,7 +166,8 @@ export default {
 			> .search {
 				padding: 0.25rem;
 				margin-left: 1rem;
-				@extend .flex-section;
+				display: flex;
+				align-items: center;
 				border-radius: 0.25rem;
 				background-color: $white;
 

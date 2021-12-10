@@ -31,6 +31,7 @@ nav {
 	padding: 0.5rem;
 	border-radius: 0.25rem;
 	background-color: $white;
+	box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.2);
 
 	> ul {
 		display: flex;

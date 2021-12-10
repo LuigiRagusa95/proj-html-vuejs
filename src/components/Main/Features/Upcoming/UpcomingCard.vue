@@ -95,6 +95,7 @@ export default {
 
 			> h3 {
 				color: $cod-gray;
+				text-transform: uppercase;
 			}
 		}
 

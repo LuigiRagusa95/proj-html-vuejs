@@ -3,6 +3,7 @@
 		<Header />
 		<Main />
 		<Footer />
+		{{ database }}
 	</div>
 </template>
 
@@ -12,6 +13,12 @@ import Header from "./components/Header/Header.vue";
 import Main from "./components/Main/Main.vue";
 export default {
 	name: "App",
+	data() {
+		return {
+			datas: [],
+			language: "it",
+		};
+	},
 	components: { Header, Main, Footer },
 };
 </script>
