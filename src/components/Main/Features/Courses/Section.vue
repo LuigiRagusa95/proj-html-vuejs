@@ -133,8 +133,10 @@ section {
 	}
 
 	.wave {
+		width: 100%;
 		color: $gallery;
 		position: absolute;
+		pointer-events: none;
 		top: calc(100% - 1rem);
 		transform: rotate(180deg);
 	}

@@ -3,16 +3,19 @@
 		<h3>Choose where you'd like to begin</h3>
 		<h1>Latest Featured <strong>Courses</strong></h1>
 		<Section />
+		<LearningSection />
 	</section>
 </template>
 
 <script>
 import Section from "../Features/Courses/Section.vue";
+import LearningSection from "../Features/Info/LearningSection.vue";
 
 export default {
 	name: "Features",
 	components: {
 		Section,
+		LearningSection,
 	},
 	data() {
 		return {};
