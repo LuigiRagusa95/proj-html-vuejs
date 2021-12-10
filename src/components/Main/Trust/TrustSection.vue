@@ -6,6 +6,13 @@
 				<h1>What make they <strong>love us?</strong></h1>
 			</div>
 			<TrustCarousel :data="carouselPeople" />
+			<div class="title mod">
+				<h3>Start today for getting <strong>Online Certification</strong></h3>
+				<h1>You can be your own guiding start with help!</h1>
+				<div class="button">
+					<a href="#">Get started now</a>
+				</div>
+			</div>
 		</div>
 	</section>
 </template>
@@ -67,6 +74,52 @@ section {
 				strong {
 					font-weight: 400;
 					color: $jungle-green;
+				}
+			}
+
+			&.mod {
+				margin-top: 4rem;
+				> h3 {
+					font-size: 1.5rem;
+					font-weight: 700;
+					margin-bottom: 0.5rem;
+					color: $mulled-wine;
+					line-height: 1.5rem;
+					text-transform: none;
+
+					> strong {
+						font-weight: 400;
+						color: $jungle-green;
+					}
+				}
+
+				> h1 {
+					font-weight: 700;
+					line-height: 2.5rem;
+					font-size: 2rem;
+					color: $mulled-wine;
+					margin-bottom: 1rem;
+					letter-spacing: 0.02rem;
+				}
+				> .button {
+					display: flex;
+					color: $white;
+					font-weight: 600;
+					width: fit-content;
+					align-items: center;
+					font-size: 0.875rem;
+					line-height: 1.5rem;
+					border-radius: 0.5rem;
+					justify-content: center;
+					background-color: $jungle-green;
+
+					> a {
+						padding: 0.875rem 2rem;
+					}
+
+					&:hover {
+						background-color: $mulled-wine;
+					}
 				}
 			}
 		}
