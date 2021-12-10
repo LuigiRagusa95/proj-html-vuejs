@@ -86,11 +86,13 @@ section {
 			align-items: center;
 
 			> h3 {
-				font-size: 1rem;
 				font-weight: 400;
 				color: $oslo-gray;
+				font-size: 0.875rem;
 				line-height: 1.5rem;
+				margin-bottom: 1rem;
 				letter-spacing: 0.02rem;
+				text-transform: uppercase;
 			}
 			> h1 {
 				display: flex;
