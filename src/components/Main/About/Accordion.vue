@@ -57,6 +57,7 @@ export default {
 		display: flex;
 		margin-top: 1rem;
 		flex-direction: column;
+		transition: 0.2s ease;
 		border-radius: 0.25rem;
 		box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.4);
 
@@ -81,6 +82,7 @@ export default {
 		> p {
 			padding: 1rem;
 			color: $oslo-gray;
+			transition: 0.2s ease;
 		}
 
 		&.active {
