@@ -4,9 +4,11 @@
 			<div>
 				<h1>Complete Your Dreams in JavaS Programming</h1>
 				<p>Learn any program in distance and for a reasonable free. You don't have to struggle alone, you've got our assistance and help.</p>
-				<a href="#" class="button-primary">
-					<span><ion-icon name="download-outline"></ion-icon></span><span>Download free E-book</span>
-				</a>
+				<div class="button">
+					<a href="#">
+						<span><ion-icon name="download-outline"></ion-icon></span><span>Download free E-book</span>
+					</a>
+				</div>
 			</div>
 		</article>
 		<figure>
@@ -49,22 +51,29 @@ section {
 				margin-bottom: 1rem;
 			}
 
-			> .button-primary {
-				color: $white;
+			> .button {
 				display: flex;
-				cursor: pointer;
+				color: $white;
+				font-weight: 600;
 				margin-top: 2rem;
-				font-weight: 500;
-				padding: 1rem 2rem;
+				width: fit-content;
 				align-items: center;
+				font-size: 0.875rem;
+				line-height: 1.5rem;
 				border-radius: 0.5rem;
-				max-width: fit-content;
 				justify-content: center;
 				background-color: $jungle-green;
 
-				> span:first-of-type {
-					font-size: 1.5rem;
-					margin-right: 0.5rem;
+				> a {
+					padding: 0.875rem 2rem;
+					> span:first-of-type {
+						font-size: 1.5rem;
+						margin-right: 0.5rem;
+					}
+				}
+
+				&:hover {
+					background-color: $mulled-wine;
 				}
 			}
 		}

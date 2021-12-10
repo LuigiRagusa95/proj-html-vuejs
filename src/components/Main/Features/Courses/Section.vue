@@ -129,6 +129,10 @@ section {
 					font-size: 1.5rem;
 				}
 			}
+
+			&:hover {
+				background-color: $mulled-wine;
+			}
 		}
 	}
 

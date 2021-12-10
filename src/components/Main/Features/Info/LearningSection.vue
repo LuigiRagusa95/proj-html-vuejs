@@ -159,6 +159,10 @@ section {
 					> a {
 						padding: 0.875rem 2rem;
 					}
+
+					&:hover {
+						background-color: $mulled-wine;
+					}
 				}
 			}
 
