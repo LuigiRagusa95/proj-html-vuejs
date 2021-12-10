@@ -4,38 +4,35 @@
 			<div class="top">
 				<div class="top-address">
 					<ul>
-						<li><span>382 NE 192st St # 87394 Miami, FL 33179-3899</span></li>
-						<li><span>+1(305)547-9909(9am-5pm EST, Monday - Friday)</span></li>
-						<li><span>support@maxcoach.components</span></li>
 						<li>
-							<a href="#"><ion-icon name="logo-facebook"></ion-icon></a><a href="#"><ion-icon name="logo-twitter"></ion-icon></a><a href="#"><ion-icon name="logo-instagram"></ion-icon></a><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+							<span>{{ data.content.address }}</span>
+						</li>
+						<li>
+							<span>{{ data.content.phone }}</span>
+						</li>
+						<li>
+							<span>{{ data.content.mail }}</span>
+						</li>
+						<li>
+							<a href="#" v-for="(value, index) in data.content.social" :key="`social-key-${index}`">
+								<ion-icon :name="`logo-${data.content.social[index].name}`"></ion-icon>
+							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="top-links">
-					<ul>
-						<li class="title"><span>Explore</span></li>
-						<li><a href="#">Start Here</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">About us</a></li>
-					</ul>
-					<ul>
-						<li class="title"><span>&nbsp;</span></li>
-						<li><a href="#">Success story</a></li>
-						<li><a href="#">Courses</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-					<ul>
-						<li class="title"><span>Information</span></li>
-						<li><a href="#">Memership</a></li>
-						<li><a href="#">Purchase guide</a></li>
-						<li><a href="#">Privacy policy </a></li>
-						<li><a href="#">Terms of services </a></li>
+					<ul v-for="(menu, index) in data.content.links" :key="`menu-key-${index}`">
+						<li class="title">
+							<span>{{ menu.title }}</span>
+						</li>
+						<li v-for="(link, idx) in menu.list" :key="`menu-key-${idx}`">
+							<a href="#">{{ menu.list[idx].name }}</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="credits">
-				<span>2020 Maxcoach. All rights Reserved</span>
+				<span>{{ data.content.rights }}</span>
 				<div class="button" @click.prevent="goToTop">
 					<a href="#"
 						><span><ion-icon name="arrow-up"></ion-icon></span
@@ -49,6 +46,9 @@
 <script>
 export default {
 	name: "Footer",
+	props: {
+		data: Object,
+	},
 	data() {
 		return {};
 	},

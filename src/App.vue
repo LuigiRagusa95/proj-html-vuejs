@@ -1,9 +1,12 @@
 <template>
 	<div id="app">
-		<Header />
-		<Main />
-		<Footer />
-		{{ database }}
+		<!-- check here for the language -->
+		<template v-if="datas">
+			<Header />
+			<Main />
+			<Footer :data="footerData" />
+		</template>
+		<template v-else><span>This content is not available in your country</span></template>
 	</div>
 </template>
 
@@ -11,13 +14,33 @@
 import Footer from "./components/Footer/Footer.vue";
 import Header from "./components/Header/Header.vue";
 import Main from "./components/Main/Main.vue";
+
+import data from "./data";
+
 export default {
 	name: "App",
+	mounted() {
+		this.getLanguage();
+		this.setFooterData();
+	},
 	data() {
 		return {
-			datas: [],
-			language: "it",
+			datas: null,
+			footerData: null,
+			language: "en",
 		};
+	},
+	methods: {
+		setFooterData() {
+			this.footerData = this.datas.views.footer;
+		},
+		getLanguage() {
+			if (Object.keys(data).includes(this.language)) {
+				this.datas = data[this.language];
+			} else {
+				this.datas = null;
+			}
+		},
 	},
 	components: { Header, Main, Footer },
 };
