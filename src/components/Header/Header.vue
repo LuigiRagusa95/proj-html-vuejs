@@ -35,11 +35,16 @@ export default {
 @import "../../styles/index.scss";
 
 header {
+	min-height: 100vh;
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	background-color: $gallery;
 
 	> section:first-of-type {
 		z-index: 1;
+		height: 100%;
+		flex-grow: 1;
 		margin: 0 auto;
 		max-width: 1400px;
 	}
