@@ -2,26 +2,26 @@
 	<section>
 		<div class="container">
 			<div class="about-title">
-				<h3>start learning coding languages</h3>
+				<h3>{{ data.subtitle }}</h3>
 				<h1>
-					<span>Build Your Dream </span>
-					<span class="title-keyword">Today</span>
+					<span>{{ data.title }} </span>
+					<span class="title-keyword">{{ data.keyword }}</span>
 				</h1>
 			</div>
 			<ul class="about-list">
-				<Card v-for="(card, index) in cards" :key="`card-n-${index}`" :title="card.title" :text="card.text" :label="card.label" :image="card.image" />
+				<Card v-for="(card, index) in data.cards" :key="`card-n-${index}`" :title="card.title" :text="card.text" :label="card.label" :image="card.image" />
 			</ul>
 			<div class="about-info">
 				<figure>
 					<div>
-						<img src="../../../assets/images/about-us-03-image-01.png" alt="about image" />
+						<img src="@/assets/images/about-us-03-image-01.png" alt="about image" />
 					</div>
 					<img class="image-overlay" src="@/assets/images/underlay-shape-lilla.svg" alt="underlay image" />
 				</figure>
 				<article>
 					<h3>Dream with <strong>MAXCOACH</strong></h3>
 					<h1>Construct A <strong>Stunning</strong> Career Perspective</h1>
-					<Accordion />
+					<Accordion :data="data.accordion" />
 				</article>
 			</div>
 		</div>
@@ -37,36 +37,11 @@ export default {
 	components: { Card, Accordion, Banner },
 	name: "AboutSection",
 	data() {
-		return {
-			cards: [
-				{
-					title: "Idea Discussion",
-					text: "Get teamed up with the specialist who work and teach coding for years at famous universities.",
-					label: "Start now",
-					image: "home-5-image-box-01",
-				},
-				{
-					title: "Idea Development",
-					text: "Learn to start building a webpage from scratch. You decide your own pace, course and speed.",
-					label: "Start now",
-					image: "home-5-image-box-02",
-				},
-				{
-					title: "System Administration",
-					text: "Learners are encouraged to study the mechanism and structure of system administration.",
-					label: "Start now",
-					image: "home-5-image-box-03",
-				},
-				{
-					title: "Graphic Design",
-					text: "Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness",
-					label: "Start now",
-					image: "home-5-image-box-04",
-				},
-			],
-		};
+		return {};
 	},
-	methods: {},
+	props: {
+		data: Object,
+	},
 };
 </script>
 

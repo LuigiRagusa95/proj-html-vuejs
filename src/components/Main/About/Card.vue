@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/index.scss";
+@import "@/styles/index.scss";
 
 .card {
 	display: flex;

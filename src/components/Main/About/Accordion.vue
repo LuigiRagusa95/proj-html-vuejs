@@ -1,6 +1,6 @@
 <template>
 	<div class="accordion">
-		<label :class="{ active: currentOpen === index }" v-for="(data, index) in accordion" :key="`accordion-key-${index}`" @click="show(index)">
+		<label :class="{ active: currentOpen === index }" v-for="(data, index) in data" :key="`accordion-key-${index}`" @click="show(index)">
 			<h1>
 				<span>{{ data.title }}</span>
 				<span>
@@ -18,22 +18,11 @@ export default {
 	name: "Accordion",
 	data() {
 		return {
-			accordion: [
-				{
-					title: "Multiple platforms Supported for Teaching & Studying",
-					paragraph: "MaxCoach supports the act of teaching and learning on multiple platforms like online or offline via material downloads. We know things aren't supposed to be devoured in a short time, you can always access our knowledge base from any device. ",
-				},
-				{
-					title: "Multiple course Participation at the Same Time",
-					paragraph: "Lorem ipsum...",
-				},
-				{
-					title: "Track Study Progress & Deliver Prompt Feedback",
-					paragraph: "Lorem ipsum...",
-				},
-			],
 			currentOpen: -1,
 		};
+	},
+	props: {
+		data: Array,
 	},
 	created() {
 		this.currentOpen = 0;
@@ -48,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/index.scss";
+@import "@/styles/index.scss";
 
 .accordion {
 	display: block;

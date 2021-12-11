@@ -1,7 +1,7 @@
 <template>
 	<main>
-		{{ aboutData }}
-		<AboutSection />
+		<!-- {{ setAboutData() }} -->
+		<AboutSection :data="aboutData" />
 		<CourseSection />
 		<InfoSection />
 		<UpcomingSection />
@@ -30,12 +30,28 @@ export default {
 	props: {
 		data: Object,
 	},
-	mounted() {
+	created() {
 		this.setAboutData();
+		this.setCourseData();
+		this.setUpcomingData();
+		this.setInfoData();
+		this.setTrustData();
 	},
 	methods: {
 		setAboutData() {
-			this.aboutData = this.data.about;
+			this.aboutData = this.data.sections.about;
+		},
+		setCourseData() {
+			this.courseData = this.data.sections.course;
+		},
+		setUpcomingData() {
+			this.upcomingData = this.data.sections.upcoming;
+		},
+		setInfoData() {
+			this.infoData = this.data.sections.info;
+		},
+		setTrustData() {
+			this.trustData = this.data.sections.trust;
 		},
 	},
 };
