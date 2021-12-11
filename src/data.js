@@ -18,8 +18,14 @@ const data = {
 			},
 			main: {
 				sections: {
+					about: {
+						name: "about",
+						title: "Build Your Dream Today",
+						subtitle: "start learning coding languages",
+						content: [],
+					},
 					content: [
-						{ name: "about", title: "Build Your Dream Today", subtitle: "start learning coding languages", content: [] },
+						{},
 						{ name: "courses", title: "Latest featured courses", subtitle: "Choose where you'd like to begin", content: [] },
 						{ name: "upcoming", title: "Upcoming Events", subtitle: "Get in contact now", content: [] },
 						{ name: "testimonial", title: "What make they love us?", subtitle: "people are praising maxcoach", content: [] },

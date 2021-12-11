@@ -5,7 +5,7 @@
 				<h3>start learning coding languages</h3>
 				<h1>
 					<span>Build Your Dream </span>
-					<span class="title-keyword">TODAY</span>
+					<span class="title-keyword">Today</span>
 				</h1>
 			</div>
 			<ul class="about-list">
@@ -35,7 +35,7 @@ import Accordion from "./Accordion.vue";
 import Banner from "./Banner.vue";
 export default {
 	components: { Card, Accordion, Banner },
-	name: "Section",
+	name: "AboutSection",
 	data() {
 		return {
 			cards: [

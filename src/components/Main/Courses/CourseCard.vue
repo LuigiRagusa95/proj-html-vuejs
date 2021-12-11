@@ -3,7 +3,7 @@
 		<a href="#">
 			<div class="card-image">
 				<div>
-					<img :src="require(`../../../../assets/images/${cover}.jpg`)" alt="cover image" />
+					<img :src="require(`@/assets/images/${cover}.jpg`)" alt="cover image" />
 				</div>
 			</div>
 			<div class="card-price">
@@ -12,7 +12,7 @@
 			<div class="card-info">
 				<div class="user">
 					<div class="user-image">
-						<figure><img :src="require(`../../../../assets/images/${image}.jpeg`)" alt="user avatar" /></figure>
+						<figure><img :src="require(`@/assets/images/${image}.jpeg`)" alt="user avatar" /></figure>
 					</div>
 					<div class="user-name">
 						<span>{{ name }}</span>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../styles/index.scss";
+@import "@/styles/index.scss";
 
 .card {
 	width: 100%;

@@ -3,7 +3,7 @@
 		<!-- check here for the language -->
 		<template v-if="datas">
 			<Header :data="headerData" />
-			<Main />
+			<Main :data="mainData" />
 			<Footer :data="footerData" />
 		</template>
 		<template v-else><span>This content is not available in your country</span></template>
@@ -21,6 +21,7 @@ export default {
 	name: "App",
 	mounted() {
 		this.getLanguage();
+		this.setMainData();
 		this.setHeaderData();
 		this.setFooterData();
 	},
@@ -29,6 +30,7 @@ export default {
 			datas: null,
 			footerData: null,
 			headerData: null,
+			mainData: null,
 			language: "en",
 		};
 	},
@@ -38,6 +40,9 @@ export default {
 		},
 		setHeaderData() {
 			this.headerData = this.datas.views.header;
+		},
+		setMainData() {
+			this.mainData = this.datas.views.main;
 		},
 		getLanguage() {
 			if (Object.keys(data).includes(this.language)) {

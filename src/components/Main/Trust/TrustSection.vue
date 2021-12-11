@@ -53,6 +53,7 @@ section {
 		> .title {
 			width: 100%;
 			display: flex;
+			margin-top: 2rem;
 			position: relative;
 			align-items: center;
 			padding-bottom: 4rem;
@@ -64,6 +65,7 @@ section {
 				color: $oslo-gray;
 				font-size: 0.875rem;
 				line-height: 1.5rem;
+				margin-bottom: 1rem;
 				text-transform: uppercase;
 			}
 

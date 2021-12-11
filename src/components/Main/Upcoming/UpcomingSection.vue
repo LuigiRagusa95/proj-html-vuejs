@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../styles/index.scss";
+@import "@/styles/index.scss";
 .upcoming {
 	> .container {
 		margin: 0 auto;
@@ -52,6 +52,7 @@ export default {
 		> .title {
 			width: 100%;
 			display: flex;
+			margin-top: 2rem;
 			align-items: center;
 			flex-direction: column;
 			justify-content: center;
@@ -61,6 +62,7 @@ export default {
 				color: $oslo-gray;
 				font-size: 0.875rem;
 				line-height: 1.5rem;
+				margin-bottom: 1rem;
 				text-transform: uppercase;
 			}
 

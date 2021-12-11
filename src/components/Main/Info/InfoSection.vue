@@ -27,21 +27,21 @@
 				</article>
 				<figure>
 					<div class="image">
-						<img src="../../../../assets/images/home-5-image-01.png" alt="image description" />
-						<img class="imgage-underlay" src="../../../../assets/images/underlay-shape-grey.svg" alt="image description" />
+						<img src="@/assets/images/home-5-image-01.png" alt="image description" />
+						<img class="imgage-underlay" src="@/assets/images/underlay-shape-grey.svg" alt="image description" />
 					</div>
 
-					<img class="imgage-overlay" src="../../../../assets/images/maxcoach-shape-05-100x100.png" alt="image description" />
+					<img class="imgage-overlay" src="@/assets/images/maxcoach-shape-05-100x100.png" alt="image description" />
 				</figure>
 			</div>
 			<div>
 				<figure>
 					<div class="image">
-						<img src="../../../../assets/images/home-5-image-02.png" alt="image description" />
-						<img class="imgage-underlay mod" src="../../../../assets/images/underlay-shape-grey.svg" alt="image description" />
+						<img src="@/assets/images/home-5-image-02.png" alt="image description" />
+						<img class="imgage-underlay mod" src="@/assets/images/underlay-shape-grey.svg" alt="image description" />
 					</div>
-					<img class="imgage-overlay" src="../../../../assets/images/maxcoach-shape-07-100x100.png" alt="image description" />
-					<img class="imgage-overlay" src="../../../../assets/images/maxcoach-shape-01.png" alt="image description" />
+					<img class="imgage-overlay" src="@/assets/images/maxcoach-shape-07-100x100.png" alt="image description" />
+					<img class="imgage-overlay" src="@/assets/images/maxcoach-shape-01.png" alt="image description" />
 				</figure>
 				<article>
 					<h3>What are you looking for?</h3>
@@ -60,7 +60,7 @@
 
 <script>
 export default {
-	name: "LearningSection",
+	name: "InfoSection",
 	data() {
 		return {};
 	},
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../styles/index.scss";
+@import "@/styles/index.scss";
 section {
 	margin-top: 16rem;
 

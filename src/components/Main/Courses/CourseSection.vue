@@ -1,5 +1,9 @@
 <template>
 	<section>
+		<div class="title">
+			<h3>Choose where you'd like to begin</h3>
+			<h1>Latest featured <strong>Courses</strong></h1>
+		</div>
 		<article>
 			<div>
 				<CourseCard v-for="(data, index) in datas" :key="`featured-card-${index}`" :title="data.title" :cover="data.cover" :price="data.price" :image="data.image" :name="data.author" :lessons="data.lessons" :students="data.students" />
@@ -23,7 +27,7 @@ import CourseCard from "./CourseCard.vue";
 
 export default {
 	components: { CourseCard },
-	name: "Section",
+	name: "CourseSection",
 	data() {
 		return {
 			datas: [
@@ -88,10 +92,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../../styles/index.scss";
+@import "@/styles/index.scss";
 section {
+	padding: 2rem 0;
 	position: relative;
 	background: linear-gradient(#ffffff, $gallery);
+
+	> .title {
+		width: 100%;
+		display: flex;
+		margin-top: 2rem;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		> h3 {
+			font-weight: 400;
+			color: $oslo-gray;
+			font-size: 0.875rem;
+			line-height: 1.5rem;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		> h1 {
+			font-weight: 700;
+			line-height: 3rem;
+			font-size: 2.5rem;
+			color: $mulled-wine;
+			margin-bottom: 1rem;
+			letter-spacing: 0.02rem;
+
+			strong {
+				font-weight: 400;
+				color: $jungle-green;
+			}
+		}
+	}
 
 	article {
 		margin: 0 auto;
