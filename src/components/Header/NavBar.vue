@@ -12,40 +12,10 @@
 				<!-- // section links -->
 				<nav>
 					<ul>
-						<li>
-							<a href="#">
-								<span>Home</span>
-								<span><ion-icon name="chevron-down-outline"></ion-icon></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span>Pages</span>
-								<span><ion-icon name="chevron-down-outline"></ion-icon></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span>Courses</span>
-								<span><ion-icon name="chevron-down-outline"></ion-icon></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span>Features</span>
-								<span><ion-icon name="chevron-down-outline"></ion-icon></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span>Blog</span>
-								<span><ion-icon name="chevron-down-outline"></ion-icon></span>
-							</a>
-						</li>
-						<li>
-							<a href="#"
-								><span>Shop</span>
-								<span><ion-icon name="chevron-down-outline"></ion-icon></span>
+						<li v-for="(item, index) in data" :key="`navigation-link-${index}`">
+							<a :href="item.goto">
+								<span>{{ item.name }}</span>
+								<span v-show="item.submenu"><ion-icon name="chevron-down-outline"></ion-icon></span>
 							</a>
 						</li>
 					</ul>
@@ -75,7 +45,9 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {},
+	props: {
+		data: Array,
+	},
 };
 </script>
 

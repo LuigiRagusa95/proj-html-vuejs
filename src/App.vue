@@ -2,7 +2,7 @@
 	<div id="app">
 		<!-- check here for the language -->
 		<template v-if="datas">
-			<Header />
+			<Header :data="headerData" />
 			<Main />
 			<Footer :data="footerData" />
 		</template>
@@ -21,18 +21,23 @@ export default {
 	name: "App",
 	mounted() {
 		this.getLanguage();
+		this.setHeaderData();
 		this.setFooterData();
 	},
 	data() {
 		return {
 			datas: null,
 			footerData: null,
+			headerData: null,
 			language: "en",
 		};
 	},
 	methods: {
 		setFooterData() {
 			this.footerData = this.datas.views.footer;
+		},
+		setHeaderData() {
+			this.headerData = this.datas.views.header;
 		},
 		getLanguage() {
 			if (Object.keys(data).includes(this.language)) {

@@ -1,15 +1,21 @@
 const data = {
 	en: {
-		navigation: [
-			{ name: "Home", submenu: [], goto: "#" },
-			{ name: "Pages", submenu: [], goto: "#" },
-			{ name: "Courses", submenu: [], goto: "#" },
-			{ name: "Features", submenu: [], goto: "#" },
-			{ name: "Blog", submenu: [], goto: "#" },
-			{ name: "Shop", submenu: [], goto: "#" },
-		],
 		views: {
-			header: {},
+			header: {
+				navigation: [
+					{ name: "Home", submenu: [], goto: "#" },
+					{ name: "Pages", submenu: [], goto: "#" },
+					{ name: "Courses", submenu: [], goto: "#" },
+					{ name: "Features", submenu: [], goto: "#" },
+					{ name: "Blog", submenu: [], goto: "#" },
+					{ name: "Shop", submenu: [], goto: "#" },
+				],
+				hero: {
+					title: "Complete Your Dreams in JavaS Programming",
+					paragraph: "Learn any program in distance and for a reasonable free. You don't have to struggle alone, you've got our assistance and help.",
+					buttonLabel: "Download free E-book",
+				},
+			},
 			main: {
 				sections: {
 					content: [

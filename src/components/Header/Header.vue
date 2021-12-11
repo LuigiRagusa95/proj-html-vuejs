@@ -1,8 +1,8 @@
 <template>
 	<header>
 		<section>
-			<NavBar />
-			<Hero />
+			<NavBar :data="data.navigation" />
+			<Hero :data="data.hero" />
 			<NavFix />
 		</section>
 		<div class="wave">
@@ -27,7 +27,9 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {},
+	props: {
+		data: Object,
+	},
 };
 </script>
 

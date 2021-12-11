@@ -2,11 +2,11 @@
 	<section>
 		<article>
 			<div>
-				<h1>Complete Your Dreams in JavaS Programming</h1>
-				<p>Learn any program in distance and for a reasonable free. You don't have to struggle alone, you've got our assistance and help.</p>
+				<h1>{{ data.title }}</h1>
+				<p>{{ data.paragraph }}</p>
 				<div class="button">
 					<a href="#">
-						<span><ion-icon name="download-outline"></ion-icon></span><span>Download free E-book</span>
+						<span><ion-icon name="download-outline"></ion-icon></span><span>{{ data.buttonLabel }}</span>
 					</a>
 				</div>
 			</div>
@@ -23,7 +23,9 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {},
+	props: {
+		data: Object,
+	},
 };
 </script>
 
