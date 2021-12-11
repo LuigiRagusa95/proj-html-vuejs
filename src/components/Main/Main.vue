@@ -2,7 +2,7 @@
 	<main>
 		<!-- {{ setAboutData() }} -->
 		<AboutSection :data="aboutData" />
-		<CourseSection />
+		<CourseSection :data="courseData" />
 		<InfoSection />
 		<UpcomingSection />
 		<TrustSection />
@@ -42,7 +42,7 @@ export default {
 			this.aboutData = this.data.sections.about;
 		},
 		setCourseData() {
-			this.courseData = this.data.sections.course;
+			this.courseData = this.data.sections.courses;
 		},
 		setUpcomingData() {
 			this.upcomingData = this.data.sections.upcoming;
