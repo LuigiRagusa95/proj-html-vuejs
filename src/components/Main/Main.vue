@@ -5,7 +5,7 @@
 		<CourseSection :data="courseData" />
 		<InfoSection />
 		<UpcomingSection :data="upcomingData" />
-		<TrustSection />
+		<TrustSection :data="trustData" />
 	</main>
 </template>
 

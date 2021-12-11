@@ -141,11 +141,21 @@ const data = {
 							{ name: "How meditation improve your mental", day: "12", month: "aug", place: "Dubai" },
 						],
 					},
-					testimonial: {},
-					content: [
-						{ name: "upcoming", title: "Upcoming Events", subtitle: "Get in contact now", content: [] },
-						{ name: "testimonial", title: "What make they love us?", subtitle: "people are praising maxcoach", content: [] },
-					],
+					trust: {
+						name: "testimonial",
+						keyword: "love us?",
+						title: "What make they",
+						subtitle: "People are praising maxcoach",
+						slogan: "You can be your own guiding start with help!",
+						sloganSub: "Start today for getting",
+						sloganSubKeyword: "Online Certification",
+						cards: [
+							{ name: "Mina Hollace", work: "/Freelancer", review: "I am a free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.", image: "testimonial-avata-02" },
+							{ name: "Madley Pondor", work: "/IT Specialist", review: "MaxCoach is the best choice.Their tutors are smart and professional when dealing with students.", image: "testimonial-avata-04" },
+							{ name: "Luvic Dubble", work: "/Private Tutor", review: "I am happy with their arrangement of lessons and subject. They reflect a scientific investigation.", image: "testimonial-avata-01" },
+							{ name: "Lorem Lorem", work: "/Placeholder", review: "Lorem Ipsum...", image: "testimonial-avata-03" },
+						],
+					},
 				},
 			},
 			footer: {

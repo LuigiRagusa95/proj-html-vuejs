@@ -2,13 +2,17 @@
 	<section>
 		<div class="container">
 			<div class="title">
-				<h3>People are oraising maxcoach</h3>
-				<h1>What make they <strong>love us?</strong></h1>
+				<h3>{{ data.subtitle }}</h3>
+				<h1>
+					{{ data.title }} <strong>{{ data.keyword }}</strong>
+				</h1>
 			</div>
-			<TrustCarousel :data="carouselPeople" />
+			<TrustCarousel :data="data.cards" />
 			<div class="title mod">
-				<h3>Start today for getting <strong>Online Certification</strong></h3>
-				<h1>You can be your own guiding start with help!</h1>
+				<h3>
+					{{ data.sloganSub }} <strong>{{ data.sloganSubKeyword }}</strong>
+				</h3>
+				<h1>{{ data.slogan }}</h1>
 				<div class="button">
 					<a href="#">Get started now</a>
 				</div>
@@ -25,16 +29,11 @@ export default {
 	components: { TrustCarousel },
 	name: "TrustSection",
 	data() {
-		return {
-			carouselPeople: [
-				{ name: "Mina Hollace", work: "/Freelancer", review: "I am a free to learn at my own pace, follow my own schedule and choose the subject I like. Great study portal for people like me.", image: "testimonial-avata-02" },
-				{ name: "Madley Pondor", work: "/IT Specialist", review: "MaxCoach is the best choice.Their tutors are smart and professional when dealing with students.", image: "testimonial-avata-04" },
-				{ name: "Luvic Dubble", work: "/Private Tutor", review: "I am happy with their arrangement of lessons and subject. They reflect a scientific investigation.", image: "testimonial-avata-01" },
-				{ name: "Lorem Lorem", work: "/Placeholder", review: "Lorem Ipsum...", image: "testimonial-avata-03" },
-			],
-		};
+		return {};
 	},
-	props: {},
+	props: {
+		data: Object,
+	},
 	methods: {},
 	computed: {},
 };
