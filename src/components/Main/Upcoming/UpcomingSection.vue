@@ -2,11 +2,13 @@
 	<section class="upcoming">
 		<div class="container">
 			<div class="title">
-				<h3>Get in contact now</h3>
-				<h1>Upcoming <strong>Events</strong></h1>
+				<h3>{{ data.subtitle }}</h3>
+				<h1>
+					{{ data.title }} <strong>{{ data.keyword }}</strong>
+				</h1>
 			</div>
 			<div class="card-list">
-				<UpcomingCard v-for="(data, index) in upcomingCards" :key="`upcoming-card-${index}`" :name="data.name" :place="data.place" :day="data.day" :month="data.month" />
+				<UpcomingCard v-for="(data, index) in data.cards" :key="`upcoming-card-${index}`" :name="data.name" :place="data.place" :day="data.day" :month="data.month" />
 			</div>
 			<div class="link">
 				<a>
@@ -26,17 +28,11 @@ import UpcomingCard from "./UpcomingCard.vue";
 export default {
 	components: { UpcomingCard },
 	name: "UpcomingSection",
+	props: {
+		data: Object,
+	},
 	data() {
-		return {
-			upcomingCards: [
-				{ name: "Storytelling Workshop", day: "22", month: "nov", place: "Texas, US" },
-				{ name: "Painting Art Contest 2020", day: "10", month: "oct", place: "New York, US" },
-				{ name: "International Art Fair 2020", day: "23", month: "nov", place: "Hamburg, Germany" },
-				{ name: "Street Performance: Call for Artist", day: "15", month: "dec", place: "Illinois, US" },
-				{ name: "Consumer Food Safety Education Conference", day: "22", month: "jul", place: "Illinois, US" },
-				{ name: "How meditation improve your mental", day: "12", month: "aug", place: "Dubai" },
-			],
-		};
+		return {};
 	},
 };
 </script>

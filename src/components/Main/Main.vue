@@ -4,7 +4,7 @@
 		<AboutSection :data="aboutData" />
 		<CourseSection :data="courseData" />
 		<InfoSection />
-		<UpcomingSection />
+		<UpcomingSection :data="upcomingData" />
 		<TrustSection />
 	</main>
 </template>
@@ -23,7 +23,6 @@ export default {
 			aboutData: null,
 			courseData: null,
 			upcomingData: null,
-			infoData: null,
 			trustData: null,
 		};
 	},
@@ -34,7 +33,6 @@ export default {
 		this.setAboutData();
 		this.setCourseData();
 		this.setUpcomingData();
-		this.setInfoData();
 		this.setTrustData();
 	},
 	methods: {
@@ -46,9 +44,6 @@ export default {
 		},
 		setUpcomingData() {
 			this.upcomingData = this.data.sections.upcoming;
-		},
-		setInfoData() {
-			this.infoData = this.data.sections.info;
 		},
 		setTrustData() {
 			this.trustData = this.data.sections.trust;

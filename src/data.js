@@ -127,7 +127,20 @@ const data = {
 						],
 						label: "View all courses",
 					},
-					upcoming: {},
+					upcoming: {
+						name: "upcoming",
+						keyword: "Events",
+						title: "Upcoming",
+						subtitle: "Get in contact now",
+						cards: [
+							{ name: "Storytelling Workshop", day: "22", month: "nov", place: "Texas, US" },
+							{ name: "Painting Art Contest 2020", day: "10", month: "oct", place: "New York, US" },
+							{ name: "International Art Fair 2020", day: "23", month: "nov", place: "Hamburg, Germany" },
+							{ name: "Street Performance: Call for Artist", day: "15", month: "dec", place: "Illinois, US" },
+							{ name: "Consumer Food Safety Education Conference", day: "22", month: "jul", place: "Illinois, US" },
+							{ name: "How meditation improve your mental", day: "12", month: "aug", place: "Dubai" },
+						],
+					},
 					testimonial: {},
 					content: [
 						{ name: "upcoming", title: "Upcoming Events", subtitle: "Get in contact now", content: [] },
