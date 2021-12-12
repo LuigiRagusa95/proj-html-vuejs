@@ -1,11 +1,11 @@
 <template>
 	<section>
 		<div class="container">
-			<div class="about-title">
+			<div class="title">
 				<h3>{{ data.subtitle }}</h3>
 				<h1>
-					<span>{{ data.title }} </span>
-					<span class="title-keyword">{{ data.keyword }}</span>
+					{{ data.title }}
+					<strong class="title-keyword">{{ data.keyword }}</strong>
 				</h1>
 			</div>
 			<ul class="about-list">
@@ -54,37 +54,8 @@ section {
 		max-width: 1400px;
 		min-height: 100vh;
 
-		> .about-title {
-			display: flex;
-			padding: 1rem;
-			flex-flow: column;
-			margin-top: 2rem;
-			align-items: center;
-
-			> h3 {
-				font-weight: 400;
-				color: $oslo-gray;
-				font-size: 0.875rem;
-				line-height: 1.5rem;
-				margin-bottom: 1rem;
-				letter-spacing: 0.02rem;
-				text-transform: uppercase;
-			}
-			> h1 {
-				display: flex;
-				font-weight: 700;
-				font-size: 2.5rem;
-				margin-top: 0.5rem;
-				color: $mulled-wine;
-				align-items: center;
-				line-height: 2.5rem;
-
-				> span:last-of-type {
-					font-weight: 400;
-					margin-left: 0.5rem;
-					color: $jungle-green;
-				}
-			}
+		> .title {
+			@include title();
 		}
 
 		> .about-list {

@@ -46,36 +46,7 @@ export default {
 		max-width: 1400px;
 
 		> .title {
-			width: 100%;
-			display: flex;
-			margin-top: 2rem;
-			align-items: center;
-			flex-direction: column;
-			justify-content: center;
-
-			> h3 {
-				font-weight: 400;
-				color: $oslo-gray;
-				font-size: 0.875rem;
-				line-height: 1.5rem;
-				margin-bottom: 1rem;
-				text-transform: uppercase;
-			}
-
-			> h1 {
-				font-weight: 700;
-				max-width: 380px;
-				line-height: 3rem;
-				font-size: 2.5rem;
-				color: $mulled-wine;
-				margin-bottom: 1rem;
-				letter-spacing: 0.02rem;
-
-				strong {
-					font-weight: 400;
-					color: $jungle-green;
-				}
-			}
+			@include title();
 		}
 
 		> .card-list {
