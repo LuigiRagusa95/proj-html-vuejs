@@ -6,7 +6,11 @@
 			<Main :data="mainData" />
 			<Footer :data="footerData" />
 		</template>
-		<template v-else><span>This content is not available in your country</span></template>
+		<template v-else>
+			<div id="loader">
+				<div class="loader"></div>
+			</div>
+		</template>
 	</div>
 </template>
 
@@ -15,15 +19,12 @@ import Footer from "./components/Footer/Footer.vue";
 import Header from "./components/Header/Header.vue";
 import Main from "./components/Main/Main.vue";
 
-import data from "./data";
+import database from "./data";
 
 export default {
 	name: "App",
-	mounted() {
-		this.getLanguage();
-		this.setMainData();
-		this.setHeaderData();
-		this.setFooterData();
+	created() {
+		this.getData();
 	},
 	data() {
 		return {
@@ -31,25 +32,22 @@ export default {
 			footerData: null,
 			headerData: null,
 			mainData: null,
+			showLoader: false,
 			language: "en",
 		};
 	},
 	methods: {
-		setFooterData() {
-			this.footerData = this.datas.views.footer;
-		},
-		setHeaderData() {
-			this.headerData = this.datas.views.header;
-		},
-		setMainData() {
-			this.mainData = this.datas.views.main;
-		},
-		getLanguage() {
-			if (Object.keys(data).includes(this.language)) {
-				this.datas = data[this.language];
-			} else {
-				this.datas = null;
-			}
+		getData() {
+			setTimeout(() => {
+				if (database) {
+					this.datas = database[this.language];
+					this.headerData = this.datas.views.header;
+					this.mainData = this.datas.views.main;
+					this.footerData = this.datas.views.footer;
+				} else {
+					this.datas = null;
+				}
+			}, 1500);
 		},
 	},
 	components: { Header, Main, Footer },
@@ -86,5 +84,27 @@ a {
 	display: flex;
 	min-width: 100vh;
 	flex-direction: column;
+}
+
+#loader {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+
+	> .loader {
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 999999px;
+		border: 3px solid $gallery;
+		border-right-color: $jungle-green;
+		animation: spin 500ms linear infinite;
+
+		@keyframes spin {
+			to {
+				transform: rotate(1turn);
+			}
+		}
+	}
 }
 </style>
