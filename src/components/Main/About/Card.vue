@@ -12,7 +12,7 @@
 			<p>{{ text }}</p>
 		</div>
 		<div class="card-button">
-			<a href="#">
+			<a :href="link">
 				<span>{{ label }}</span>
 				<span><ion-icon name="arrow-forward-outline"></ion-icon></span>
 			</a>
@@ -31,6 +31,7 @@ export default {
 		text: String,
 		label: String,
 		image: String,
+		link: String,
 	},
 	methods: {},
 	computed: {},

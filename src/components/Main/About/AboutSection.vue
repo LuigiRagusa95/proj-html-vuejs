@@ -9,7 +9,7 @@
 				</h1>
 			</div>
 			<ul class="about-list">
-				<Card v-for="(card, index) in data.cards" :key="`card-n-${index}`" :title="card.title" :text="card.text" :label="card.label" :image="card.image" />
+				<Card v-for="(card, index) in data.cards" :key="`card-n-${index}`" :title="card.title" :text="card.text" :label="card.label" :image="card.image" :link="card.goto" />
 			</ul>
 			<div class="about-info">
 				<figure>
@@ -25,7 +25,7 @@
 				</article>
 			</div>
 		</div>
-		<Banner />
+		<Banner :data="data.banner" />
 	</section>
 </template>
 

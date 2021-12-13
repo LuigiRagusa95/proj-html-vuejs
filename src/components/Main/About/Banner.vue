@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<article v-for="(data, index) in datas" :key="`banner-key-${index}`">
+		<article v-for="(data, index) in data" :key="`banner-key-${index}`">
 			<h1>{{ data.number }}</h1>
 			<p>{{ data.label }}</p>
 		</article>
@@ -10,21 +10,17 @@
 <script>
 export default {
 	name: "Banner",
+	props: {
+		data: Array,
+	},
 	data() {
-		return {
-			datas: [
-				{ number: "1.926", label: "finished sessions" },
-				{ number: "3.092+", label: "enrolled learners" },
-				{ number: "200", label: "online instructor" },
-				{ number: "100%", label: "satisfaction rate" },
-			],
-		};
+		return {};
 	},
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/index.scss";
+@import "@/styles/index.scss";
 
 section {
 	display: flex;

@@ -1,6 +1,6 @@
 <template>
 	<div class="card">
-		<a href="#">
+		<a :href="goto">
 			<div class="card-image">
 				<div>
 					<img :src="require(`@/assets/images/${cover}.jpg`)" alt="cover image" />
@@ -48,6 +48,7 @@ export default {
 		title: String,
 		lessons: String,
 		students: String,
+		goto: String,
 	},
 };
 </script>

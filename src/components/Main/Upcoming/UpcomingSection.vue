@@ -8,13 +8,13 @@
 				</h1>
 			</div>
 			<div class="card-list">
-				<UpcomingCard v-for="(data, index) in data.cards" :key="`upcoming-card-${index}`" :name="data.name" :place="data.place" :day="data.day" :month="data.month" />
+				<UpcomingCard v-for="(data, index) in data.cards" :key="`upcoming-card-${index}`" :name="data.name" :place="data.place" :day="data.day" :month="data.month" :button="data.button" />
 			</div>
 			<div class="link">
 				<a>
 					Excited about our event?
-					<a href="#"
-						>View all events
+					<a :href="data.button.goto">
+						{{ data.button.label }}
 						<span><ion-icon name="arrow-forward-outline"></ion-icon></span>
 					</a>
 				</a>

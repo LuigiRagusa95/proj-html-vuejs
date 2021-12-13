@@ -8,12 +8,12 @@
 		</div>
 		<article>
 			<div>
-				<CourseCard v-for="(data, index) in data.cards" :key="`featured-card-${index}`" :title="data.title" :cover="data.cover" :price="data.price" :image="data.image" :name="data.author" :lessons="data.lessons" :students="data.students" />
+				<CourseCard v-for="(data, index) in data.cards" :key="`featured-card-${index}`" :title="data.title" :cover="data.cover" :price="data.price" :image="data.image" :name="data.author" :lessons="data.lessons" :students="data.students" :goto="data.goto" />
 			</div>
 			<div>
 				<div class="button">
-					<a href="#">
-						<span>{{ data.label }}</span
+					<a :href="data.button.goto">
+						<span>{{ data.button.label }}</span
 						><span><ion-icon name="arrow-forward-outline"></ion-icon></span>
 					</a>
 				</div>

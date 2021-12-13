@@ -14,7 +14,7 @@
 							<span>{{ data.content.mail }}</span>
 						</li>
 						<li>
-							<a href="#" v-for="(value, index) in data.content.social" :key="`social-key-${index}`">
+							<a :href="data.content.social[index].goto" v-for="(value, index) in data.content.social" :key="`social-key-${index}`">
 								<ion-icon :name="`logo-${data.content.social[index].name}`"></ion-icon>
 							</a>
 						</li>
@@ -26,7 +26,7 @@
 							<span>{{ menu.title }}</span>
 						</li>
 						<li v-for="(link, idx) in menu.list" :key="`menu-key-${idx}`">
-							<a href="#">{{ menu.list[idx].name }}</a>
+							<a :href="menu.list[idx].goto">{{ menu.list[idx].name }}</a>
 						</li>
 					</ul>
 				</div>

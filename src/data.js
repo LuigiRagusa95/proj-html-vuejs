@@ -13,7 +13,10 @@ const data = {
 				hero: {
 					title: "Complete Your Dreams in JavaS Programming",
 					paragraph: "Learn any program in distance and for a reasonable free. You don't have to struggle alone, you've got our assistance and help.",
-					buttonLabel: "Download free E-book",
+					button: {
+						label: "Download free E-book",
+						goto: "#",
+					},
 				},
 			},
 			main: {
@@ -28,24 +31,28 @@ const data = {
 								title: "Idea Discussion",
 								text: "Get teamed up with the specialist who work and teach coding for years at famous universities.",
 								label: "Start now",
+								goto: "#",
 								image: "home-5-image-box-01",
 							},
 							{
 								title: "Idea Development",
 								text: "Learn to start building a webpage from scratch. You decide your own pace, course and speed.",
 								label: "Start now",
+								goto: "#",
 								image: "home-5-image-box-02",
 							},
 							{
 								title: "System Administration",
 								text: "Learners are encouraged to study the mechanism and structure of system administration.",
 								label: "Start now",
+								goto: "#",
 								image: "home-5-image-box-03",
 							},
 							{
 								title: "Graphic Design",
 								text: "Have a passion for graphics and arts? Show your talents with confidence and self-assertiveness",
 								label: "Start now",
+								goto: "#",
 								image: "home-5-image-box-04",
 							},
 						],
@@ -63,6 +70,12 @@ const data = {
 								paragraph: "Lorem ipsum...",
 							},
 						],
+						banner: [
+							{ number: "1.926", label: "finished sessions" },
+							{ number: "3.092+", label: "enrolled learners" },
+							{ number: "200", label: "online instructor" },
+							{ number: "100%", label: "satisfaction rate" },
+						],
 					},
 					courses: {
 						name: "courses",
@@ -78,6 +91,7 @@ const data = {
 								students: "50",
 								price: "$40.00",
 								cover: "course-01",
+								goto: "#",
 							},
 							{
 								image: "user-02",
@@ -87,6 +101,7 @@ const data = {
 								students: "769",
 								price: "Free",
 								cover: "course-02",
+								goto: "#",
 							},
 							{
 								image: "user-02",
@@ -96,6 +111,7 @@ const data = {
 								students: "62",
 								price: "$19.00",
 								cover: "course-03",
+								goto: "#",
 							},
 							{
 								image: "user-01",
@@ -105,6 +121,7 @@ const data = {
 								students: "67",
 								price: "$26.00",
 								cover: "course-04",
+								goto: "#",
 							},
 							{
 								image: "user-01",
@@ -114,6 +131,7 @@ const data = {
 								students: "51",
 								price: "$39.00",
 								cover: "course-05",
+								goto: "#",
 							},
 							{
 								image: "user-01",
@@ -123,9 +141,13 @@ const data = {
 								students: "76",
 								price: "$59.00",
 								cover: "course-06",
+								goto: "#",
 							},
 						],
-						label: "View all courses",
+						button: {
+							label: "View all courses",
+							goto: "#",
+						},
 					},
 					upcoming: {
 						name: "upcoming",
@@ -133,13 +155,17 @@ const data = {
 						title: "Upcoming",
 						subtitle: "Get in contact now",
 						cards: [
-							{ name: "Storytelling Workshop", day: "22", month: "nov", place: "Texas, US" },
-							{ name: "Painting Art Contest 2020", day: "10", month: "oct", place: "New York, US" },
-							{ name: "International Art Fair 2020", day: "23", month: "nov", place: "Hamburg, Germany" },
-							{ name: "Street Performance: Call for Artist", day: "15", month: "dec", place: "Illinois, US" },
-							{ name: "Consumer Food Safety Education Conference", day: "22", month: "jul", place: "Illinois, US" },
-							{ name: "How meditation improve your mental", day: "12", month: "aug", place: "Dubai" },
+							{ name: "Storytelling Workshop", day: "22", month: "nov", place: "Texas, US", button: { label: "Get ticket", goto: "#" } },
+							{ name: "Painting Art Contest 2020", day: "10", month: "oct", place: "New York, US", button: { label: "Get ticket", goto: "#" } },
+							{ name: "International Art Fair 2020", day: "23", month: "nov", place: "Hamburg, Germany", button: { label: "Get ticket", goto: "#" } },
+							{ name: "Street Performance: Call for Artist", day: "15", month: "dec", place: "Illinois, US", button: { label: "Get ticket", goto: "#" } },
+							{ name: "Consumer Food Safety Education Conference", day: "22", month: "jul", place: "Illinois, US", button: { label: "Get ticket", goto: "#" } },
+							{ name: "How meditation improve your mental", day: "12", month: "aug", place: "Dubai", button: { label: "Get ticket", goto: "#" } },
 						],
+						button: {
+							label: "View all events",
+							goto: "#",
+						},
 					},
 					trust: {
 						name: "testimonial",
@@ -155,6 +181,10 @@ const data = {
 							{ name: "Luvic Dubble", work: "/Private Tutor", review: "I am happy with their arrangement of lessons and subject. They reflect a scientific investigation.", image: "testimonial-avata-01" },
 							{ name: "Lorem Lorem", work: "/Placeholder", review: "Lorem Ipsum...", image: "testimonial-avata-03" },
 						],
+						button: {
+							label: "Get started now",
+							goto: "#",
+						},
 					},
 				},
 			},
@@ -164,10 +194,10 @@ const data = {
 					phone: "+1(305)547-9909(9am-5pm EST, Monday - Friday)",
 					mail: "support@maxcoach.components",
 					social: [
-						{ name: "facebook", link: "#" },
-						{ name: "twitter", link: "#" },
-						{ name: "instagram", link: "#" },
-						{ name: "linkedin", link: "#" },
+						{ name: "facebook", goto: "#" },
+						{ name: "twitter", goto: "#" },
+						{ name: "instagram", goto: "#" },
+						{ name: "linkedin", goto: "#" },
 					],
 					links: [
 						{

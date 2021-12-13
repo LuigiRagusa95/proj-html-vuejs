@@ -13,7 +13,7 @@
 			</div>
 			<div class="upcoming-card-right-button">
 				<div class="button">
-					<a href="#">Get ticket</a>
+					<a :href="button.goto">{{ button.label }}</a>
 				</div>
 			</div>
 		</div>
@@ -28,6 +28,7 @@ export default {
 		place: String,
 		day: String,
 		month: String,
+		button: Object,
 	},
 	data() {
 		return {};

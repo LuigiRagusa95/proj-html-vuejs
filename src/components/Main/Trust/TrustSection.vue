@@ -14,7 +14,7 @@
 				</h3>
 				<h1>{{ data.slogan }}</h1>
 				<div class="button">
-					<a href="#">Get started now</a>
+					<a :href="data.button.goto">{{ data.button.label }}</a>
 				</div>
 				<div class="image-overlay"><img src="@/assets/images/maxcoach-shape-01.png" alt="image overlay" /></div>
 				<div class="image-overlay"><img src="@/assets/images/maxcoach-shape-02.png" alt="image overlay" /></div>

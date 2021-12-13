@@ -5,8 +5,8 @@
 				<h1>{{ data.title }}</h1>
 				<p>{{ data.paragraph }}</p>
 				<div class="button">
-					<a href="#">
-						<span><ion-icon name="download-outline"></ion-icon></span><span>{{ data.buttonLabel }}</span>
+					<a :href="data.button.goto">
+						<span><ion-icon name="download-outline"></ion-icon></span><span>{{ data.button.label }}</span>
 					</a>
 				</div>
 			</div>
