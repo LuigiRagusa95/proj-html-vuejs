@@ -42,8 +42,8 @@ section {
 		width: 100%;
 		display: flex;
 		padding: 1rem;
+		color: $oslo-gray;
 		align-items: center;
-		color: $mulled-wine;
 		justify-content: center;
 
 		> div:first-of-type {
@@ -52,6 +52,7 @@ section {
 				font-size: 2.5rem;
 				line-height: 3rem;
 				margin-bottom: 1rem;
+				color: $mulled-wine;
 			}
 
 			> .button {
