@@ -44,7 +44,7 @@ header {
 	background-color: $gallery;
 
 	> section:first-of-type {
-		z-index: 1;
+		z-index: 2;
 		height: 100%;
 		flex-grow: 1;
 		margin: 0 auto;
@@ -54,7 +54,7 @@ header {
 	.wave {
 		bottom: 0;
 		width: 100%;
-		z-index: -1;
+		z-index: 1;
 		display: absolute;
 		pointer-events: none;
 		transform: rotate(180deg) scaleX(-1);
